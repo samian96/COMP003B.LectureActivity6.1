@@ -16,6 +16,6 @@ namespace COMP003B.LectureActivity6._1.Models
 
         // Collection navigation property
 
-        public virtual ICollection<Enrollments>? Enrollments { get; set; }
+        public virtual ICollection<Enrollment>? Enrollments { get; set; }
     }
 }
