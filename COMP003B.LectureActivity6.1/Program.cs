@@ -1,3 +1,5 @@
+using COMP003B.LectureActivity6._1.Data;
+using Microsoft.EntityFrameworkCore;
 namespace COMP003B.LectureActivity6._1
 {
     public class Program
@@ -8,7 +10,9 @@ namespace COMP003B.LectureActivity6._1
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
-
+            // set up the database context
+            builder.Services.AddDbContext<WebDevAcademyContext>(options =>
+                options.UseSqlServer("Name=ConnectionStrings:DefaultConnection"));
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
